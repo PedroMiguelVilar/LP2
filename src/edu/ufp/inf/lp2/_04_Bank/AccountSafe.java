@@ -1,4 +1,4 @@
-package edu.ufp.inf.lp2._04_Bank;
+/*package edu.ufp.inf.lp2._04_Bank;
 
 public class AccountSafe extends Account{
     public AccountSafe(int an, double b, Client o) {
@@ -32,3 +32,4 @@ public class AccountSafe extends Account{
         return null;
     }
 }
+*/

@@ -1,35 +1,36 @@
 package  edu.ufp.inf.lp2._03PL;
 
 
-import java.util.Date;
+
+import edu.ufp.inf.lp2._02_Collections.LottoBagArray;
+
+import java.util.Calendar;
 
 public class Person {
   private String idNumber;
   private String name;
   private String adress;
   private Date birth;
+  private String nif;
 
-  public Person(String id, String n, String a, Date b) {
+  public Person(String id, String n, String a, Date birth, String nif) {
     this.idNumber=id;
     this.name=n;
     this.adress=a;
-    this.birth=b;
+    this.birth = birth;
+    this.nif = nif;
   }
 
   public int age() {
-  return 0;
+    int age;
+    Date date = new Date((short) Calendar.getInstance().get(Calendar.DAY_OF_MONTH), (short) Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.YEAR));
+    age = birth.differenceYears(date)*(-1);
+    if (!birth.beforeDate(date)) age-=1;
+    return age;
   }
+
   public boolean olderThan(Person p) {
-  return false;
-  }
-  public String toString() {
-  return null;
-  }
-  public boolean equals(Object o) {
-  return false;
-  }
-  public int hashCode() {
-  return 0;
+    return  this.age()>p.age();
   }
 
 }
