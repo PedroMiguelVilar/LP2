@@ -17,7 +17,6 @@ public class Point {
 
 
   public float distX(Point p) {
-
     return this.x- p.x;
   }
 
@@ -35,11 +34,11 @@ public class Point {
   }
 
   public void moveX(float dx) {
-    this.x+=x;
+    this.x+=dx;
   }
 
   public void moveY(float dy) {
-    this.y+=y;
+    this.y+=dy;
   }
 
   public float getX() {
