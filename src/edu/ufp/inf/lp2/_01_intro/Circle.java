@@ -30,13 +30,13 @@ public class Circle {
   return (float) ((float) 2*Math.PI*center.dist(periferic));
   }
 
-  public boolean isInside(Circle c, Point p) {
+  public boolean isInside(Point p) {
     Circle circle = new Circle(center, p);
-  return circle.area()<=c.area();
+  return circle.area()<=circle.area();
   }
 
-  public boolean isOutside(Circle c, Point p) {
-  return !isInside(c,p);
+  public boolean isOutside(Point p) {
+  return !isInside(p);
   }
 
   public String toString() {
@@ -53,8 +53,8 @@ public class Circle {
 
     Point point = new Point(4,4);
 
-    System.out.println(circle.isInside(circle, point));
-    System.out.println(circle.isOutside(circle, point));
+    System.out.println(circle.isInside(point));
+    System.out.println(circle.isOutside(point));
 
   }
 
