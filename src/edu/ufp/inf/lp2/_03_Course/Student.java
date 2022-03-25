@@ -1,11 +1,11 @@
 package edu.ufp.inf.lp2._03_Course;
 
-import edu.ufp.inf.lp2._02_Collections.LottoBagArray;
+import edu.ufp.inf.lp2._03PL.Person;
 import edu.ufp.inf.lp2._03PL.Date;
 
 import java.util.ArrayList;
 
-public class Student {
+public class Student extends Person{
 
     private long number;
     private Date registration;
@@ -13,6 +13,16 @@ public class Student {
     private String password;
     private ArrayList<Grade> grades = new ArrayList<>();
     private CourseClass courseClass;
+    private String nome;
+
+    public Student(String id, String n, String a, Date birth, String nif) {
+        super(id, n, a, birth, nif);
+    }
+
+    public String getNameStudent(){
+        return super.getName();
+    }
+
 
     public long getNumber() {
         return number;
@@ -62,12 +72,7 @@ public class Student {
         this.courseClass = courseClass;
     }
 
-    public Student(long number, Date registration, String email, String password) {
-        this.number = number;
-        this.registration = registration;
-        this.email = email;
-        this.password = password;
-    }
+
 
 
     public void addGrade(Grade g) {

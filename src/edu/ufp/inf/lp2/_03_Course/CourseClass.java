@@ -51,5 +51,14 @@ public class CourseClass {
         return null;
     }
 
+    public Student searchStudent(String name){
+        for (Student o : student){
+            if (name.equals(o.getNameStudent())){
+                return o;
+            }
+        }
+        return null;
+    }
+
 
 }

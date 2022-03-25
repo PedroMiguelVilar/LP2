@@ -21,6 +21,10 @@ public class Person {
     this.nif = nif;
   }
 
+  public String getName(){
+    return this.name;
+  }
+
   public int age() {
     int age;
     Date date = new Date((short) Calendar.getInstance().get(Calendar.DAY_OF_MONTH), (short) Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.YEAR));
