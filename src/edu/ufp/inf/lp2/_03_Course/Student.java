@@ -13,7 +13,6 @@ public class Student extends Person{
     private String password;
     private ArrayList<Grade> grades = new ArrayList<>();
     private CourseClass courseClass;
-    private String nome;
 
     public Student(String id, String n, String a, Date birth, String nif) {
         super(id, n, a, birth, nif);
