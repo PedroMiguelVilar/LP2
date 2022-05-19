@@ -10,13 +10,9 @@ public abstract class Account implements AccountMoneyI, AccountOwnershipI {
         return accountNumber;
     }
 
-    protected double getBalance() {
-        return balance;
-    }
+    protected double getBalance() {return balance;}
 
-    protected void setBalance(double balance) {
-        this.balance = balance;
-    }
+    protected void setBalance(double balance) {this.balance = balance;}
 
     protected Client getOwner() {
         return owner;
@@ -26,13 +22,12 @@ public abstract class Account implements AccountMoneyI, AccountOwnershipI {
         this.owner = o;
     }
 
-    public void setAccountOwner(Client o){
-        if(owner == null){
+    public void setAccountOwner(Client o) {
+        if (owner == null) {
             this.setOwner(o);
-        }else{
+        } else {
             System.out.println("Já Existe!");
         }
-
     }
 
     //ACABAR
