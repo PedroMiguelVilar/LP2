@@ -1,10 +1,9 @@
 package edu.ufp.inf.lp2._04_Bank;
 
-import com.sun.org.apache.bcel.internal.generic.ARETURN;
+import edu.ufp.inf.lp2._03PL.Date;
 import edu.ufp.inf.lp2._03PL.Person;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Client extends Person implements ClientRelatioshipsI {
     private String vatNumber;
@@ -29,7 +28,7 @@ public class Client extends Person implements ClientRelatioshipsI {
     }
 
     public Client(String id, String n, String a, Date b, String vn){
-        super(id, n, a,b);
+        super(id, n, a, b, vn);
         this.vatNumber=vn;
     }
 

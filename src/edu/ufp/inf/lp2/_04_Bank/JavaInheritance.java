@@ -8,6 +8,4 @@ public class JavaInheritance {
       Interface -> Coleção de métodos
      */
 
-
-
 }

@@ -59,13 +59,10 @@ public class LottoBagArray {
     }
 
     public ArrayList<Integer>toIntergerArrayList(){
-
         ArrayList<Integer>IntegerArrayList = new ArrayList<>(numberRemainingBalls);
-
         for (int i = 0; i < numberRemainingBalls; i++){
             IntegerArrayList.add(bagInts[i]);
         }
-
         return IntegerArrayList;
     }
 
